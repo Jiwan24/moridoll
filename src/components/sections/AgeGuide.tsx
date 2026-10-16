@@ -47,7 +47,8 @@ export default function AgeGuide() {
             <motion.div
               key={activeGroup.id}
               role="tabpanel"
-              aria-label={`Panduan usia ${activeGroup.range}`}
+              id={`panel-${activeGroup.id}`}
+              aria-labelledby={`tab-${activeGroup.id}`}
               initial={shouldReduce ? false : { opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={shouldReduce ? {} : { opacity: 0, y: -16 }}

@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MoriDoll Website
+
+Sensory play kit edukatif — website produk MoriDoll.
+
+Built with **Next.js 15 (App Router)**, **Tailwind CSS 3**, **Framer Motion**, **React Hook Form**, and **Zod**.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build
+```
 
-## Learn More
+## Known Deviations from Spec
 
-To learn more about Next.js, take a look at the following resources:
+### Tailwind CSS version
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The spec (§3.2) references Tailwind v4 syntax (`@import "tailwindcss"` and `@theme {}` blocks with CSS custom properties such as `--color-purple`, `--font-heading`). This project uses **Tailwind CSS v3** with `tailwind.config.ts` and `@tailwind` directives in `globals.css`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Reason: Tailwind v4 was in early-release at implementation time and had limited ecosystem compatibility (PostCSS plugin, Next.js adapter). v3.4 provides the same design token coverage via `tailwind.config.ts` and is production-stable.
 
-## Deploy on Vercel
+Effect: The spec-specified CSS variable names (`--color-purple`, etc.) are not defined as standalone CSS custom properties and will not resolve outside Tailwind utility class contexts. All brand colors and fonts are correctly applied via Tailwind utilities throughout the codebase.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/           Next.js App Router pages
+  components/
+    layout/      Navbar, Footer, SmileDivider
+    sections/    One file per page section
+    ui/          Reusable primitives (Tabs, SectionHeading, …)
+  data/          Static data (age-guide.ts, logo-colors.ts, …)
+  lib/           Utilities (cn, site config)
+```
+
+## Assets
+
+Placeholder assets (`/public/logo/`, `/public/images/`) must be replaced with final production assets before go-live. See TODO comments in Hero.tsx, SketchGallery.tsx, and Footer.tsx.

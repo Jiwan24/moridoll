@@ -19,49 +19,67 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* 1. Hero */}
+        {/* 1. Hero (bg-cream) */}
         <Hero />
 
-        {/* Divider: cream → cream (wave decoration) */}
-        <SmileDivider color="#FFFFFF" />
-
-        {/* 2. Four Aspects */}
-        <FourAspects />
-
-        {/* 3. Concept */}
-        <Concept />
-
-        {/* Divider */}
-        <SmileDivider color="#FFFFFF" />
-
-        {/* 4. Package Contents */}
-        <PackageContents />
-
-        {/* 5. Benefits */}
-        <Benefits />
-
-        {/* 6. Problem / Solution */}
-        <ProblemSolution />
-
-        {/* Divider */}
+        {/* Divider: cream → cream */}
         <SmileDivider color="#FFF9F0" />
 
-        {/* 7. Advantages */}
-        <Advantages />
+        {/* 2. Four Aspects (bg-cream) */}
+        <FourAspects />
 
-        {/* 8. Age Guide (placeholder) */}
-        <AgeGuide />
+        {/* Divider: cream → cream */}
+        <SmileDivider color="#FFF9F0" />
 
-        {/* Divider */}
+        {/* 3. Concept (bg-cream) */}
+        <Concept />
+
+        {/* Divider: cream → white */}
+        <SmileDivider color="#FFF9F0" />
+
+        {/* 4. Package Contents (bg-white) */}
+        <PackageContents />
+
+        {/* Divider: white → cream */}
         <SmileDivider color="#FFFFFF" />
 
-        {/* 9. Logo Philosophy (static swatches) */}
+        {/* 5. Benefits (bg-cream) */}
+        <Benefits />
+
+        {/* Divider: cream → white */}
+        <SmileDivider color="#FFF9F0" />
+
+        {/* 6. Problem / Solution (bg-white) */}
+        <ProblemSolution />
+
+        {/* Divider: white → cream */}
+        <SmileDivider color="#FFFFFF" />
+
+        {/* 7. Advantages (bg-cream) */}
+        <Advantages />
+
+        {/* Divider: cream → white */}
+        <SmileDivider color="#FFF9F0" />
+
+        {/* 8. Age Guide (bg-white) */}
+        <AgeGuide />
+
+        {/* Divider: white → cream */}
+        <SmileDivider color="#FFFFFF" />
+
+        {/* 9. Logo Philosophy (bg-cream) */}
         <LogoPhilosophy />
 
-        {/* 10. Sketch Gallery (placeholder) */}
+        {/* Divider: cream → white */}
+        <SmileDivider color="#FFF9F0" />
+
+        {/* 10. Sketch Gallery (bg-white) */}
         <SketchGallery />
 
-        {/* 11. Contact CTA (placeholder form + WA button) */}
+        {/* Divider: white → purple */}
+        <SmileDivider color="#FFFFFF" />
+
+        {/* 11. Contact CTA (bg-purple) */}
         <ContactCTA />
       </main>
       <Footer />

@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-10 pt-6 border-t border-white/20 text-center font-body text-sm text-white/60">
-            © 2026 MoriDoll. Semua hak dilindungi.
+            © 2026 MoriDoll
           </div>
         </div>
       </footer>
