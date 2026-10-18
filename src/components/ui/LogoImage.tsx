@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 interface LogoImageProps {
   className?: string;
   height?: number;
@@ -7,31 +9,34 @@ interface LogoImageProps {
 }
 
 export default function LogoImage({ className = "h-10 w-auto", height = 40, width = 120 }: LogoImageProps) {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <span
+        className="font-heading font-extrabold text-2xl"
+        style={{
+          background: "linear-gradient(90deg, #7B4FBF, #F2603A, #FFC933, #1FB5A8)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
+        MoriDoll
+      </span>
+    );
+  }
+
   return (
-    <svg
-      viewBox="0 0 200 80"
-      height={height}
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/images/logo.webp"
+      alt="MoriDoll Logo"
       width={width}
+      height={height}
       className={className}
-      aria-label="MoriDoll Logo"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* M - Purple */}
-      <text x="10" y="65" fontSize="60" fontWeight="800" fill="#7B4FBF" fontFamily="Baloo 2, sans-serif">
-        M
-      </text>
-      {/* ori - Mixed colors */}
-      <text x="60" y="65" fontSize="60" fontWeight="800" fill="#F2603A" fontFamily="Baloo 2, sans-serif">
-        ori
-      </text>
-      {/* D - Orange */}
-      <text x="110" y="65" fontSize="60" fontWeight="800" fill="#F2603A" fontFamily="Baloo 2, sans-serif">
-        D
-      </text>
-      {/* oll - Mixed */}
-      <text x="155" y="65" fontSize="60" fontWeight="800" fill="#FFC933" fontFamily="Baloo 2, sans-serif">
-        oll
-      </text>
-    </svg>
+      onError={() => setImgError(true)}
+      style={{ width: "auto", height: `${height}px` }}
+    />
   );
 }

@@ -320,43 +320,13 @@ export default function Hero() {
                 
                 {/* Logo */}
                 <div className="relative h-48 w-72 md:h-56 md:w-96 lg:h-64 lg:w-[28rem] flex items-center justify-center">
-                  <svg
-                    viewBox="0 0 1080 433"
-                    className="w-full h-full drop-shadow-2xl"
-                    aria-label="MoriDoll Logo"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Large stylized MoriDoll text with decorative elements */}
-                    <defs>
-                      <linearGradient id="moriGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style={{stopColor: "#7B4FBF", stopOpacity: 1}} />
-                        <stop offset="25%" style={{stopColor: "#F2603A", stopOpacity: 1}} />
-                        <stop offset="50%" style={{stopColor: "#FFC933", stopOpacity: 1}} />
-                        <stop offset="75%" style={{stopColor: "#1FB5A8", stopOpacity: 1}} />
-                        <stop offset="100%" style={{stopColor: "#7B4FBF", stopOpacity: 1}} />
-                      </linearGradient>
-                    </defs>
-                    
-                    {/* M */}
-                    <text x="50" y="280" fontSize="240" fontWeight="800" fill="#7B4FBF" fontFamily="Baloo 2, sans-serif">
-                      M
-                    </text>
-                    {/* ori */}
-                    <text x="280" y="280" fontSize="240" fontWeight="800" fill="#F2603A" fontFamily="Baloo 2, sans-serif">
-                      ori
-                    </text>
-                    {/* D */}
-                    <text x="680" y="280" fontSize="240" fontWeight="800" fill="#F2603A" fontFamily="Baloo 2, sans-serif">
-                      D
-                    </text>
-                    {/* oll */}
-                    <text x="850" y="280" fontSize="240" fontWeight="800" fill="#FFC933" fontFamily="Baloo 2, sans-serif">
-                      oll
-                    </text>
-                    
-                    {/* Decorative smile */}
-                    <path d="M 200 350 Q 400 420 600 350" stroke="#7B4FBF" strokeWidth="20" fill="none" strokeLinecap="round" />
-                  </svg>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/logo.webp"
+                    alt="MoriDoll Logo — Play Today, Grow Every Day"
+                    className="object-contain drop-shadow-2xl w-full h-full"
+                    loading="eager"
+                  />
                 </div>
 
                 {/* Shine effect overlay */}
