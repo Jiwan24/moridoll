@@ -23,11 +23,12 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#beranda" className="flex items-center gap-2" aria-label="MoriDoll — Beranda">
           <Image
-            src="/logo/moridoll-logo.svg"
+            src="/logo/logo.jpeg"
             alt="MoriDoll"
             width={120}
-            height={36}
+            height={40}
             priority
+            className="h-auto w-auto"
           />
         </a>
 

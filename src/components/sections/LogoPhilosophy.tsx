@@ -19,9 +19,8 @@ export default function LogoPhilosophy() {
 
         {/* Logo image */}
         <div className="relative mx-auto mb-10 h-20 w-48 md:h-24 md:w-60">
-          {/* TODO: ganti dengan logo asli saat tersedia */}
           <Image
-            src="/logo/moridoll-logo.svg"
+            src="/logo/logo.jpeg"
             alt="Logo MoriDoll"
             fill
             className="object-contain"

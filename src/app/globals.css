@@ -2,8 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    animation: gradient 8s ease infinite;
+  }
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-cream font-body text-ink antialiased;
+  }
+
+  /* Skill ui-ux-pro-max checklist: visible focus for keyboard nav */
+  :focus-visible {
+    outline: 2px solid #7b4fbf;
+    outline-offset: 2px;
+  }
+
+  /* Skill checklist: all clickable elements show pointer */
+  button:not(:disabled),
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: #7b4fbf;
+    color: #fff;
+  }
+
+  /* Skill checklist: prefers-reduced-motion respected (Hero already uses useReducedMotion for JS) */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

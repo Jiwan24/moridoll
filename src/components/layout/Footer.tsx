@@ -22,10 +22,11 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <a href="#beranda" aria-label="MoriDoll — Beranda">
                 <Image
-                  src="/logo/moridoll-logo-white.svg"
+                  src="/logo/logo.jpeg"
                   alt="MoriDoll"
-                  width={130}
+                  width={120}
                   height={40}
+                  className="h-auto w-auto"
                 />
               </a>
               <p className="font-body text-sm text-white/80 max-w-xs">

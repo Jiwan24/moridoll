@@ -82,6 +82,7 @@ export default function SketchGallery() {
                 src={sketch.src}
                 alt={sketch.label}
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
                 unoptimized
               />
@@ -122,6 +123,7 @@ export default function SketchGallery() {
                   src={openSrc}
                   alt={openLabel}
                   fill
+                  sizes="(max-width: 768px) 90vw, 672px"
                   className="object-contain"
                   unoptimized
                 />
