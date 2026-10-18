@@ -1,0 +1,12 @@
+# Vercel build ignore rules
+.git
+.next
+node_modules
+.env.local
+.env.*.local
+coverage
+dist
+build
+
+# DO NOT ignore public folder
+!public
