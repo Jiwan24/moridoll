@@ -21,7 +21,8 @@ export default function Footer() {
             {/* Column 1: Logo + tagline */}
             <div className="flex flex-col gap-4">
               <a href="#beranda" aria-label="MoriDoll — Beranda">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src="/logo/logo.jpeg"
                   alt="MoriDoll Logo"
                   width={120}

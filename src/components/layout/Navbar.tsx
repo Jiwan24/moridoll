@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -22,12 +21,12 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#beranda" className="flex items-center gap-2" aria-label="MoriDoll — Beranda">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/logo/logo.jpeg"
             alt="MoriDoll Logo"
             width={120}
             height={40}
-            priority
             className="h-10 w-auto object-contain"
           />
         </a>
