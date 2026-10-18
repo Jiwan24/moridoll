@@ -24,12 +24,11 @@ export default function Navbar() {
         <a href="#beranda" className="flex items-center gap-2" aria-label="MoriDoll — Beranda">
           <Image
             src="/logo/logo.jpeg"
-            alt="MoriDoll"
+            alt="MoriDoll Logo"
             width={120}
             height={40}
             priority
-            className="h-10 w-auto"
-            unoptimized
+            className="h-10 w-auto object-contain"
           />
         </a>
 

@@ -23,11 +23,10 @@ export default function Footer() {
               <a href="#beranda" aria-label="MoriDoll — Beranda">
                 <Image
                   src="/logo/logo.jpeg"
-                  alt="MoriDoll"
+                  alt="MoriDoll Logo"
                   width={120}
                   height={40}
-                  className="h-10 w-auto"
-                  unoptimized
+                  className="h-10 w-auto object-contain"
                 />
               </a>
               <p className="font-body text-sm text-white/80 max-w-xs">
