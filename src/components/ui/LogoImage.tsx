@@ -30,7 +30,7 @@ export default function LogoImage({ className = "h-10 w-auto", height = 40, widt
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/images/logo.webp"
+      src="https://raw.githubusercontent.com/Jiwan24/moridoll/master/public/images/logo.webp"
       alt="MoriDoll Logo"
       width={width}
       height={height}

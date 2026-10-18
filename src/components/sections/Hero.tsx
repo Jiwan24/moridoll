@@ -322,7 +322,7 @@ export default function Hero() {
                 <div className="relative h-48 w-72 md:h-56 md:w-96 lg:h-64 lg:w-[28rem] flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/images/logo.webp"
+                    src="https://raw.githubusercontent.com/Jiwan24/moridoll/master/public/images/logo.webp"
                     alt="MoriDoll Logo — Play Today, Grow Every Day"
                     className="object-contain drop-shadow-2xl w-full h-full"
                     loading="eager"
