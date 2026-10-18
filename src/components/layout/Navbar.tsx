@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import LogoImage from "@/components/ui/LogoImage";
 
 const navLinks = [
   { label: "Beranda", href: "#beranda" },
@@ -16,32 +17,12 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // Debug: log logo path in browser console
-  if (typeof window !== 'undefined') {
-    console.log('Logo path:', '/logo/logo.jpeg');
-  }
-
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#beranda" className="flex items-center gap-2" aria-label="MoriDoll — Beranda">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo/logo.jpeg"
-            alt="MoriDoll Logo"
-            width={120}
-            height={40}
-            className="h-10 w-auto object-contain"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none';
-              const textLogo = e.currentTarget.parentElement?.querySelector('.text-logo-fallback');
-              if (textLogo) (textLogo as HTMLElement).style.display = 'block';
-            }}
-          />
-          <span className="text-logo-fallback font-heading font-bold text-2xl text-purple hidden">
-            MoriDoll
-          </span>
+          <LogoImage className="h-10 w-auto object-contain" height={40} width={120} />
         </a>
 
         {/* Desktop nav */}

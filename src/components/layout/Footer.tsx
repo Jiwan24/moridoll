@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoImage from "@/components/ui/LogoImage";
 import SmileDivider from "@/components/layout/SmileDivider";
 import { site } from "@/lib/site";
 
@@ -21,14 +22,7 @@ export default function Footer() {
             {/* Column 1: Logo + tagline */}
             <div className="flex flex-col gap-4">
               <a href="#beranda" aria-label="MoriDoll — Beranda">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/logo/logo.jpeg"
-                  alt="MoriDoll Logo"
-                  width={120}
-                  height={40}
-                  className="h-10 w-auto object-contain"
-                />
+                <LogoImage className="h-10 w-auto object-contain" height={40} width={120} />
               </a>
               <p className="font-body text-sm text-white/80 max-w-xs">
                 {site.tagline} — Sensory play kit edukatif untuk tumbuh kembang balita yang optimal.
