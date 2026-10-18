@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface LogoImageProps {
   className?: string;
@@ -8,53 +9,35 @@ interface LogoImageProps {
   width?: number;
 }
 
-export default function LogoImage({ className = "h-10 w-auto", height = 40, width = 120 }: LogoImageProps) {
+export default function LogoImage({ className = "h-10 w-auto", height = 40, width = 100 }: LogoImageProps) {
   const [imgError, setImgError] = useState(false);
 
   if (imgError) {
-    // SVG fallback — matches the real MoriDoll logo colors
     return (
-      <svg
-        width={width}
-        height={height}
-        viewBox="0 0 200 60"
-        xmlns="http://www.w3.org/2000/svg"
-        className={className}
-        aria-label="MoriDoll Logo"
+      <span
+        className="font-heading font-extrabold text-2xl"
+        style={{
+          background: "linear-gradient(90deg, #7B4FBF, #F2603A, #FFC933, #1FB5A8)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
       >
-        <text
-          x="4"
-          y="44"
-          fontFamily="'Baloo 2', ui-rounded, system-ui, sans-serif"
-          fontSize="42"
-          fontWeight="800"
-          fill="#7B4FBF"
-        >
-          Mori
-        </text>
-        <text
-          x="104"
-          y="44"
-          fontFamily="'Baloo 2', ui-rounded, system-ui, sans-serif"
-          fontSize="42"
-          fontWeight="800"
-          fill="#F2603A"
-        >
-          Doll
-        </text>
-      </svg>
+        MoriDoll
+      </span>
     );
   }
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src="/logo/logo.jpeg"
       alt="MoriDoll Logo"
-      width={width}
-      height={height}
+      width={1080}
+      height={433}
+      priority
       className={className}
       onError={() => setImgError(true)}
+      style={{ width: "auto", height: `${height}px` }}
     />
   );
 }
