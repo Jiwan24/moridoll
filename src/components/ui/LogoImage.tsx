@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 interface LogoImageProps {
   className?: string;
@@ -29,12 +28,12 @@ export default function LogoImage({ className = "h-10 w-auto", height = 40, widt
   }
 
   return (
-    <Image
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
       src="/images/logo.jpeg"
       alt="MoriDoll Logo"
-      width={1080}
-      height={433}
-      priority
+      width={width}
+      height={height}
       className={className}
       onError={() => setImgError(true)}
       style={{ width: "auto", height: `${height}px` }}

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
@@ -68,9 +67,20 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="font-heading text-5xl font-extrabold leading-[1.1] tracking-tight text-balance md:text-6xl lg:text-7xl"
             >
-              <span className="bg-gradient-to-r from-purple via-orange to-purple bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              <motion.span 
+                animate={!shouldReduce ? { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] } : {}}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                style={{
+                  background: "linear-gradient(90deg, #7B4FBF, #F2603A, #FFC933, #1FB5A8, #7B4FBF)",
+                  backgroundSize: "200% 200%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
                 Play Today,
-              </span>
+              </motion.span>
               <br />
               <span className="text-purple drop-shadow-sm">
                 Grow Every Day
@@ -310,13 +320,12 @@ export default function Hero() {
                 
                 {/* Logo */}
                 <div className="relative h-48 w-72 md:h-56 md:w-96 lg:h-64 lg:w-[28rem]">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src="/images/logo.jpeg"
                     alt="MoriDoll Logo — Play Today, Grow Every Day"
-                    fill
-                    priority
-                    className="object-contain drop-shadow-2xl"
-                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 384px, 448px"
+                    className="object-contain drop-shadow-2xl w-full h-full"
+                    loading="eager"
                   />
                 </div>
 
