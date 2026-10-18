@@ -26,7 +26,8 @@ export default function Footer() {
                   alt="MoriDoll"
                   width={120}
                   height={40}
-                  className="h-auto w-auto"
+                  className="h-10 w-auto"
+                  unoptimized
                 />
               </a>
               <p className="font-body text-sm text-white/80 max-w-xs">
