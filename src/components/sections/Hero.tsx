@@ -311,7 +311,7 @@ export default function Hero() {
                 {/* Logo */}
                 <div className="relative h-48 w-72 md:h-56 md:w-96 lg:h-64 lg:w-[28rem]">
                   <Image
-                    src="/logo/logo.jpeg"
+                    src="/images/logo.jpeg"
                     alt="MoriDoll Logo — Play Today, Grow Every Day"
                     fill
                     priority

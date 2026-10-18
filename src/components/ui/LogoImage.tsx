@@ -30,7 +30,7 @@ export default function LogoImage({ className = "h-10 w-auto", height = 40, widt
 
   return (
     <Image
-      src="/logo/logo.jpeg"
+      src="/images/logo.jpeg"
       alt="MoriDoll Logo"
       width={1080}
       height={433}
